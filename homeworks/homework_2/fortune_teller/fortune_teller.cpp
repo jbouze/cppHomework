@@ -84,7 +84,8 @@ int main(int argc, char* argv[])
 
     string user_noun = getUserNoun(birth_season);
     string ending = getEnding(user_name);
-    
+
+    cout << endl << "Here is your description:" << endl;    
     cout << user_name << ", the " << adjective <<
        " " << user_noun << " that " << ending << endl;
    
