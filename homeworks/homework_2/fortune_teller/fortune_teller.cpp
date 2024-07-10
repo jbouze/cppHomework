@@ -2,6 +2,8 @@
 #include <string>
 #include <vector>
 #include <array>
+#include <map>
+#include <iterator>
 
 using std::cin;
 using std::cout;
@@ -9,6 +11,7 @@ using std::endl;
 using std::string;
 using std::vector;
 using std::array;
+using std::map;
 
 string getUserName()
 {
@@ -46,16 +49,12 @@ string getUserAdjective(string name, vector<string> adjectives)
 
 string getUserNoun(string birth_season)
 {
-    if (birth_season == "spring")
-        return "STL guru";
-    else if (birth_season == "summer")
-        return "C++ expert";
-    else if (birth_season == "autumn")
-        return "coding beast";
-    else if (birth_season == "winter")
-        return "software design hero";
-    else
-        return "";
+    map<string, string> seasons_mapping = {{"spring", "STL guru"},
+        {"summer", "C++ expert"},
+        {"autumn", "coding beast"},
+        {"winter", "software design hero"}};
+
+    return seasons_mapping.at(birth_season);
 }
 
 string getEnding(string name)
