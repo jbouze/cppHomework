@@ -1,10 +1,19 @@
 #include <iostream>
 #include <string>
-#include "myRandom.h"
+#include <random>
 using std::cout;
 using std::cin;
 using std::endl;
 using std::string;
+
+int randomNumber(int lowerBound, int upperBound)
+{
+    std::random_device random_device;
+    std::mt19937 random_engine{random_device()};
+    std::uniform_int_distribution<> distribution{lowerBound, upperBound};
+    int num = distribution(random_engine);
+    return num;
+}
 
 void printWelcomeStatement()
 {

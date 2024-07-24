@@ -7,5 +7,3 @@ set (CMAKE_CXX_EXTENSIONS           OFF)
 
 add_executable(${PROJECT_NAME} guessing_game.cpp)
 
-target_link_libraries(${PROJECT_NAME} myRandom)
-add_subdirectory(lib)
