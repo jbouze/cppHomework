@@ -43,7 +43,7 @@ int main(int argc, char* argv[])
     unsigned int guess = -1;
 
     while (guess != target) {
-        cout << "Please provide the next guess:" << endl;
+        cout << "Please provide the next guess: ";
         cin >> guess;
         counter++;
         if (guess > target) {
